@@ -1,7 +1,7 @@
 const express = require('express');
 const http = require('http');
 const path = require('path');
-const createBareServer = require('@tomphttp/bare-server-node');
+const { createBareServer } = require('@tomphttp/bare-server-node');
 
 const app = express();
 const server = http.createServer(app);
@@ -11,7 +11,6 @@ app.use((req, res, next) => {
   if (bare.shouldRoute(req)) {
     bare.routeRequest(req, res);
   } else {
-    //  index.html for all other requests
     res.sendFile(path.join(__dirname, 'index.html'));
   }
 });
