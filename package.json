@@ -1,8 +1,9 @@
 {
   "name": "bare-server",
   "version": "1.0.0",
-  "description": "TompHTTP Bare Server with Fallback",
+  "description": "Toml HTTP Bare Server with Fallback",
   "main": "index.cjs",
+  "type": "commonjs",
   "scripts": {
     "start": "node index.cjs"
   },
